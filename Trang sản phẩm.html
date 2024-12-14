@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylestrangsanpham.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar for Categories -->
+    <div class="sidebar">
+      <h3>Danh Mục Sản Phẩm</h3>
+      <div class="category" data-category="all">Tất cả danh mục</div>
+      <div class="category" data-category="giaycaogot">Giày cao gót</div>
+      <div class="category" data-category="giaythethao">Giày thể thao</div>
+      <div class="category" data-category="sandal">Sandal</div>
+      <div class="category" data-category="giaybupbe">Giày búp bê</div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+      <!-- Header with toggle filter and search input -->
+      <div class="header">
+        <button id="toggleFilters">
+          <i class="fas fa-filter"></i> LỌC &amp; SẮP XẾP
+        </button>
+        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." />
+      </div>
+      
+      <!-- Filter and Sort Options -->
+      <div class="filters" id="filterSection" style="display: none;">
+        <div class="filter">
+          <select id="priceFilter">
+            <option value="none">Bỏ bộ lọc</option>
+            <option value="500000-1000000">500.000₫ - 1.000.000₫</option>
+            <option value="1000000-1500000">1.000.000₫ - 1.500.000₫</option>
+            <option value="1500000-2000000">1.500.000₫ - 2.000.000₫</option>
+            <option value="2000000">Trên 2.000.000₫</option>
+          </select>
+        </div>
+        <div class="filter">
+          <select id="sortPrice">
+            <option value="asc">Giá: Từ thấp đến cao</option>
+            <option value="desc">Giá: Từ cao đến thấp</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product List -->
+      <div class="list" id="productList">
+        <div class="item" data-price="700000" data-category="giaybupbe">
+            <div class="img">
+                <img src="/Users/admin/Downloads/Ảnh giày cao gót/Giày búp bê bệt trang trí khoá kim loại/Giày búp bê bệt trang trí khoá kim loại đen 1.webp">
+            </div>
+            <div class="content">
+                <div class="title">Giày búp bê bệt trang trí khoá kim loại</div>
+                <div class="price">700.000₫</div>
+                <button class="add">Xem chi tiết</button>
+            </div>
+        </div>
+
+        <div class="item" data-price="800000" data-category="giaycaogot">
+            <div class="img">
+                <img src="/Users/admin/Downloads/Ảnh giày cao gót/Giày cao gót phối si vân/Giày cao gót phối si vân đen 1.webp">
+            </div>
+            <div class="content">
+                <div class="title">Giày cao gót phối si vân</div>
+                <div class="price">800.000₫</div>
+                <button class="add">Xem chi tiết</button>
+            </div>
+        </div>
+
+        <div class="item" data-price="650000" data-category="giaybupbe">
+            <div class="img">
+                <img src="/Users/admin/Downloads/Ảnh giày cao gót/Giày búp bê mũi vuông trang trí khoá/Giày búp bê mũi vuông trang trí khoá đen 1 .webp">
+            </div>
+            <div class="content">
+                <div class="title">Giày búp bê mũi vuông trang trí khoá</div>
+                <div class="price">650.000₫</div>
+                <button class="add">Xem chi tiết</button>
+            </div>
+        </div>
+
+        <div class="item" data-price="950000" data-category="giaybupbe">
+            <div class="img">
+                <img src="/Users/admin/Downloads/Ảnh giày cao gót/Giày búp bê slingback đế bệt mũi loafer/Giày búp bê slingback đế bệt mũi loafer 1 nâu .webp">
+            </div>
+            <div class="content">
+                <div class="title">Giày búp bê slingback đế bệt mũi loafer</div>
+                <div class="price">950.000₫</div>
+                <button class="add">Xem chi tiết</button>
+            </div>
+        </div>
+
+        <div class="item" data-price="1400000" data-category="giaycaogot">
+            <div class="img">
+                <img src="/Users/admin/Downloads/Ảnh giày cao gót/Giày cao gót quai Mary Jane/Giày cao gót quai Mary Jane đen 1.webp">
+            </div>
+            <div class="content">
+                <div class="title">Giày cao gót quai Mary Jane</div>
+                <div class="price">1.400.000₫</div>
+                <button class="add">Xem chi tiết</button>
+            </div>
+        </div>
+        <div class="item" data-price="1600000" data-category="giaycaogot">
+            <div class="img">
+                <img src="/Users/admin/Downloads/Ảnh giày cao gót/Giày cao gót xi phối khoá trang trí/Giày cao gót xi phối khoá trang trí kem 1.webp">
+            </div>
+            <div class="content">
+                <div class="title">Giày cao gót xi phối khoá trang trí</div>
+                <div class="price">1.600.000₫</div>
+                <button class="add">Xem chi tiết</button>
+            </div>
+        </div>
+        <div class="item" data-price="1200000" data-category="giaybupbe">
+          <div class="img">
+              <img src="/Users/admin/Downloads/Ảnh giày cao gót/Giày búp bê khoá trang trí kim loại/Giày búp bê khoá trang trí kim loại đen 1.webp">
+          </div>
+          <div class="content">
+              <div class="title">Giày búp bê khoá trang trí kim loại</div>
+              <div class="price">1.200.000₫</div>
+              <button class="add">Xem chi tiết</button>
+          </div>
+          </div>
+          <div class="item" data-price="600000" data-category="sandal">
+            <div class="img">
+                <img src="/Users/admin/Downloads/Ảnh giày cao gót/Giày sandal đế bệt quai ngang/Giày sandal hai quai ngang đen 1.webp">
+            </div>
+            <div class="content">
+                <div class="title">Giày sandal đế bệt quai ngang</div>
+                <div class="price">600.000₫</div>
+                <button class="add">Xem chi tiết</button>
+            </div>
+              </div>
+            <div class="item" data-price="800000" data-category="sandal">
+              <div class="img">
+                  <img src="/Users/admin/Downloads/Ảnh giày cao gót/Giày sandal dây tròn/Giày sandal dây tròn đen 1.webp">
+              </div>
+              <div class="content">
+                  <div class="title">Giày sandal dây tròn</div>
+                  <div class="price">800.000₫</div>
+                  <button class="add">Xem chi tiết</button>
+              </div>
+                </div>
+              <div class="item" data-price="1300000" data-category="sandal">
+                <div class="img">
+                    <img src="/Users/admin/Downloads/Ảnh giày cao gót/Giày sandal quai phồng /Giày sandal quai phồng đen 1.webp">
+                </div>
+                <div class="content">
+                    <div class="title">Giày sandal quai phồng</div>
+                    <div class="price">1.300.000₫</div>
+                    <button class="add">Xem chi tiết</button>
+                </div>
+                </div>
+                <div class="item" data-price="900000" data-category="giaythethao">
+                  <div class="img">
+                      <img src="/Users/admin/Downloads/Ảnh giày cao gót/Giày thể thao wonderlust /Giày thể thao wonderlust 1.webp">
+                  </div>
+                  <div class="content">
+                      <div class="title">Giày thể thao wanderlust</div>
+                      <div class="price">900.000₫</div>
+                      <button class="add">Xem chi tiết</button>
+                  </div>                   
+                </div>
+     
+              </div>
+        <ul class="listPage">
+           
+        </ul>
+    </div>
+
+    
+    <script>
+    let thisPage = 1;
+    let limit = 6;
+    const list = document.querySelectorAll('.list .item');
+    const productList = document.getElementById('productList');
+    const items = Array.from(document.querySelectorAll('.item'));
+    const searchInput = document.getElementById('searchInput');
+    const categories = document.querySelectorAll('.category');
+    const priceFilter = document.getElementById('priceFilter');
+    const sortPrice = document.getElementById('sortPrice');
+    let filteredItems = items; // Sử dụng filteredItems để lưu trữ sản phẩm đã lọc
+
+    // Lọc và sắp xếp sản phẩm
+    function filterAndSortProducts() {
+      thisPage = 1; // Đặt lại trang hiện tại về trang 1 khi lọc hoặc sắp xếp
+      filteredItems = items;
+
+      // Lọc theo giá
+      const selectedPrice = priceFilter.value;
+      if (selectedPrice !== 'none') {
+        const [minPrice, maxPrice] = selectedPrice.split('-').map(price => parseInt(price.replace('₫', '').replace('.', '')));
+        filteredItems = filteredItems.filter(item => {
+          const price = parseInt(item.getAttribute('data-price'));
+          return maxPrice ? price >= minPrice && price <= maxPrice : price >= minPrice;
+        });
+      }
+
+      // Lọc theo từ khóa tìm kiếm
+      const searchQuery = searchInput.value.toLowerCase();
+      if (searchQuery) {
+        filteredItems = filteredItems.filter(item => {
+          const title = item.querySelector('.title').textContent.toLowerCase();
+          return title.includes(searchQuery);
+        });
+      }
+
+      // Lọc theo danh mục
+      const selectedCategory = document.querySelector('.category.selected')?.getAttribute('data-category');
+      if (selectedCategory && selectedCategory !== 'all') {
+        filteredItems = filteredItems.filter(item => item.getAttribute('data-category') === selectedCategory);
+      }
+
+      // Sắp xếp theo giá
+      const sortOrder = sortPrice.value;
+      filteredItems.sort((a, b) => {
+        const priceA = parseInt(a.getAttribute('data-price'));
+        const priceB = parseInt(b.getAttribute('data-price'));
+        return sortOrder === 'asc' ? priceA - priceB : priceB - priceA;
+      });
+
+      // Cập nhật danh sách sản phẩm sau khi lọc
+      updateProductList(filteredItems);
+      listPage();
+    }
+
+    // Cập nhật danh sách sản phẩm
+    function updateProductList(updatedItems) {
+      productList.innerHTML = ''; // Xóa tất cả sản phẩm cũ
+      updatedItems.forEach(item => productList.appendChild(item)); // Thêm sản phẩm đã lọc
+    }
+
+    // Phân trang
+    function listPage() {
+      let count = Math.ceil(filteredItems.length / limit);
+      document.querySelector('.listPage').innerHTML = '';
+
+      if (thisPage !== 1) {
+        let prev = document.createElement('li');
+        prev.innerText = 'PREV';
+        prev.setAttribute('onclick', `changePage(${thisPage - 1})`);
+        document.querySelector('.listPage').appendChild(prev);
+      }
+
+      for (let i = 1; i <= count; i++) {
+        let newPage = document.createElement('li');
+        newPage.innerText = i;
+        if (i === thisPage) {
+          newPage.classList.add('active');
+        }
+        newPage.setAttribute('onclick', `changePage(${i})`);
+        document.querySelector('.listPage').appendChild(newPage);
+      }
+
+      if (thisPage !== count) {
+        let next = document.createElement('li');
+        next.innerText = 'NEXT';
+        next.setAttribute('onclick', `changePage(${thisPage + 1})`);
+        document.querySelector('.listPage').appendChild(next);
+      }
+
+      loadItem();
+    }
+
+    // Chuyển trang
+    function changePage(i) {
+      thisPage = i;
+      loadItem();
+    }
+
+    // Hiển thị sản phẩm theo trang
+    function loadItem() {
+      let beginGet = limit * (thisPage - 1);
+      let endGet = limit * thisPage - 1;
+
+      filteredItems.forEach((item, key) => {
+        if (key >= beginGet && key <= endGet) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Lắng nghe sự kiện thay đổi bộ lọc
+    priceFilter.addEventListener('change', filterAndSortProducts);
+    sortPrice.addEventListener('change', filterAndSortProducts);
+    searchInput.addEventListener('input', filterAndSortProducts);
+
+    // Lắng nghe sự kiện chọn danh mục
+    categories.forEach(category => {
+      category.addEventListener('click', () => {
+        categories.forEach(cat => cat.classList.remove('selected'));
+        category.classList.add('selected');
+        filterAndSortProducts(); // Lọc lại sản phẩm theo danh mục được chọn
+      });
+    });
+
+    // Toggle bộ lọc khi nhấn nút
+    const toggleButton = document.getElementById('toggleFilters');
+    const filterSection = document.getElementById('filterSection');
+    toggleButton.addEventListener('click', () => {
+      filterSection.style.display = filterSection.style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Lọc và sắp xếp sản phẩm khi trang được tải
+    window.onload = filterAndSortProducts;
+  </script>
+  
+</body>
+</html>

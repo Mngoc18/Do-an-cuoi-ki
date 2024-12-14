@@ -1,0 +1,84 @@
+<style>
+body {
+         margin: 0;
+         font-family: Arial, sans-serif;
+     }
+     .navbar {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 10px 20px;
+         background-color: white;
+     }
+     .navbar-left {
+         display: flex;
+         align-items: center;
+     }
+     .navbar-left img {
+         height: 30px;
+         margin-right: 20px;
+     }
+     .navbar-left a {
+         margin: 0 10px;
+         text-decoration: none;
+         color: black;
+         font-weight: bold;
+     }
+     .navbar-left a.outlet {
+         color: red;
+     }
+     .navbar-right {
+         display: flex;
+         align-items: center;
+     }
+     .navbar-right a {
+         margin: 0 10px;
+         text-decoration: none;
+         color: black;
+         font-size: 14px;
+     }
+     .search-bar {
+         display: flex;
+         align-items: center;
+         background-color: #f1f1f1;
+         padding: 5px 10px;
+         border-radius: 5px;
+     }
+     .search-bar input {
+         border: none;
+         background: none;
+         outline: none;
+         padding: 5px;
+         font-size: 14px;
+     }
+     .search-bar i {
+         margin-left: 5px;
+         color: black;
+     }
+     .icons {
+         display: flex;
+         align-items: center;
+     }
+     .icons a {
+         position: relative;
+         margin: 0 10px;
+         color: black;
+         font-size: 20px;
+     }
+     .icons a .badge {
+         position: absolute;
+         top: -5px;
+         right: -10px;
+         background-color: yellow;
+         color: black;
+         border-radius: 50%;
+         padding: 2px 5px;
+         font-size: 12px;
+     }
+     .icons a.cart .badge {
+         background-color: blue;
+     }
+     .flag img {
+         height: 15px;
+     }
+</style>

@@ -1,0 +1,218 @@
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Giỏ Hàng</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: space-between;
+            width: 100%;
+            position: relative; /* Thêm để cho phần .right-section có thể đặt ở góc dưới */
+        }
+        .left-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 68%; /* Chiếm 68% để phần còn lại là 32% cho phần thanh toán */
+            box-sizing: border-box;
+        }
+        .header {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #222;
+        }
+        .total-items {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            background-color: #fafafa;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .cart-item img {
+            width: 120px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .item-details {
+            flex: 1;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        .item-details p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .item-actions {
+            display: flex;
+            align-items: left;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+        .item-actions select {
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            outline: none;
+        }
+        .item-actions .fas {
+            font-size: 18px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .item-actions .fas:hover {
+            color: #007bff;
+        }
+        .item-actions input {
+            width: fit-content;
+        }
+        .summary {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .summary p {
+            margin: 5px 0;
+        }
+        .summary .total {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+        .checkout-btn {
+            display: block;
+            width: 95%;
+            padding: 12px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+            transition: background-color 0.3s ease;
+        }
+        .checkout-btn:hover {
+            background-color: rgb(66, 61, 61);
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .footer i {
+            margin-right: 5px;
+        }
+
+        .right-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%; /* Chiếm 30% cho phần thanh toán */
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            box-sizing: border-box;
+        }
+        .item-price {
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .right-section {
+                width: 100%;
+                position: static;
+                margin-top: 20px;
+            }
+            .cart-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .item-details {
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="header">GIỎ HÀNG CỦA BẠN</div>
+            <div class="total-items">TỔNG CỘNG (1 sản phẩm)</div>
+            <div class="cart-item">
+                <img alt="Giày cao gót quai Mary Jane" src="/Users/admin/Downloads/Ảnh giày cao gót/Giày cao gót quai Mary Jane/Giày cao gót quai Mary Jane đen 1.webp" />
+                <div class="item-details">
+                    <p>Giày cao gót quai Mary Jane</p>
+                    <p>Đen</p>
+                    <p>KÍCH CỠ: 6 UK</p>
+                    <div class="item-actions">
+                        <h3>Số lượng:</h3>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+                    </div>
+                    <div class="item-price">
+                        <span><b>Đơn giá: 2.400.000₫</b></span>
+                    </div>
+                </div>
+                <i class="fas fa-times"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer">
+                <p><i class="fas fa-truck"></i> GIAO HÀNG MIỄN PHÍ CHO ĐƠN HÀNG TRÊN 600.000VND</p>
+                <p><i class="fas fa-undo"></i> TRẢ HÀNG DỄ DÀNG</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="summary">
+                <p>Tổng <span class="item-price">2.400.000₫</span></p>
+                <p>(Đã bao gồm thuế 177.778₫)</p>
+            </div>
+            <a class="checkout-btn" href="#">THANH TOÁN</a>
+        </div>
+    </div>
+
+</body>
+</html>

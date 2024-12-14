@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thankyou</title>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif; 
+            margin: 10px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+        .section {
+            width: 100%;
+            max-width: 700px; 
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px; 
+            text-align: center;
+        }
+        .os-header-heading {
+            margin-top: 20px; 
+        }
+        h2, h3 {
+            font-size: 30px; 
+            color: #e90074;
+        }
+        p {
+            margin: 10px 0;
+            color: black;
+        }
+        .step-footer {
+            margin-top: 30px; 
+        }
+        .step-footer-continue-btn {
+            display: inline-block;
+            padding: 12px 24px; 
+            background-color: #ff80b0;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .step-footer-continue-btn:hover {
+            background-color: #e90074;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="section-header os-header">
+            <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-width="2" class="hanging-icon checkmark">
+                <path class="checkmark_circle" d="M25 49c13.255 0 24-10.745 24-24S38.255 1 25 1 1 11.745 1 25s10.745 24 24 24z"></path>
+                <path class="checkmark_check" d="M15 24.51l7.307 7.308L35.125 19"></path>
+            </svg>
+            <div class="os-header-heading">
+                <h2 class="os-header-title">Đặt hàng thành công</h2>
+                <span class="os-description">Cảm ơn bạn đã mua hàng!</span>
+            </div>
+        </div>
+
+        <div class="step-footer">
+            <a href="product.php" class="step-footer-continue-btn btn">
+                <span class="btn-content">Tiếp tục mua hàng</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
